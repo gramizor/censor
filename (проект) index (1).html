@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>censor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="box">
+                <h1>Case censor</h1>
+                <div class="text">
+                    На данном веб-ресурсе имеется функционал, который позволяет добавлять комментарии и устанавливать
+                    фильтр на нежелательные слова с их автоматической заменой в тексте пользовательских отзывов.<br>
+                    Представлена демонстрационная версия, и в дальнейшем, администраторам будет предоставлена
+                    возможность управлять заменами слов, тогда как возможность оставления комментариев останется
+                    доступной для всех пользователей.<br>
+                    Данные хранятся в localstorage,в дальнейшем можно перенести в базу данных.
+                </div>
+            </div>
+            <div class="box">
+                <div class="columns">
+                    <div class="comments">
+                        <h2>Добавьте комментарий</h2>
+                        <div class="input-area">
+                            <input type="text" id="new-comment" placeholder="Введите текст...">
+                            <button onclick="addComment()" class="add-btn">Добавить</button>
+                        </div>
+                        <ul id="comment-list"></ul>
+                        <img src="" alt="">
+                    </div>
+                    <div class="replacements">
+                        <h2>Добавьте замены</h2>
+                        <div class="input-area">
+                            <input type="text" id="new-replacement" placeholder="Слово 1 [пробел] Слово 2">
+                            <button onclick="addReplacement()" class="add-btn">Добавить</button>
+                        </div>
+                        <ul id="replacement-list"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="censor.js"></script>
+</body>
+
+</html>
